@@ -5,3 +5,11 @@
 bootstrap@4.0.0-beta.3:
   version "4.0.0-beta.3"
   resolved "http://registry.npm.taobao.org/bootstrap/download/bootstrap-4.0.0-beta.3.tgz#60f0660bc3d121176514b361f6f83201c7ff8874"
+
+jquery@^3.2.1:
+  version "3.2.1"
+  resolved "http://registry.npm.taobao.org/jquery/download/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
+
+popper.js@^1.12.9:
+  version "1.12.9"
+  resolved "http://registry.npm.taobao.org/popper.js/download/popper.js-1.12.9.tgz#0dfbc2dff96c451bb332edcfcfaaf566d331d5b3"
