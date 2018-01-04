@@ -5,12 +5,23 @@
   "main": "index.js",
   "author": "zh4ui",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
   "dependencies": {
     "bootstrap": "4.0.0-beta.3",
     "jquery": "^3.2.1",
     "popper.js": "^1.12.9"
   },
   "devDependencies": {
+    "autoprefixer": "^7.2.4",
+    "css-loader": "^0.28.7",
+    "exports-loader": "^0.6.4",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.0.10",
+    "precss": "^2.0.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
     "webpack": "^3.10.0"
   }
 }
