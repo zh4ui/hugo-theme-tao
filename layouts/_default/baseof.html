@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    {{ if .Params.UseBootstrapCdn }}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    {{ else }}
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    {{ end }}
+    <link rel="stylesheet" href="/css/style.css">
     <title> 
       {{- block "title" . }}
         {{.Site.Title}}

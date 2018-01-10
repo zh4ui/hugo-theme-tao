@@ -1,16 +1,33 @@
 
 {{ define "main" }}
-  <main>
-      {{ .Content }}
-          <ul class="contents">
-          {{ range .Paginator.Pages }}
-              <li>{{.Title}}
-                  <div>
-                    {{ partial "summary.html" . }}
-                  </div>
-              </li>
-          {{ end }}
-          </ul>
-      {{ partial "pagination.html" . }}
-  </main>
+<div class="container">
+    {{ range .Paginator.Pages }}
+    <span class="badge badge-success">{{ .Date.Format "2006-01-02" }}</span>
+    {{ .WordCount }} words 
+    {{ .ReadingTime }} minute reading
+    <div>
+    Categories: 
+    {{ range $ith, $cat := .Params.categories }}
+        {{ if $ith }}, {{ end }}
+        <a href="/categories/{{$cat | urlize }}/">{{ $cat }}</a>
+    {{ end }}
+    </div>
+    <div>
+    <h2> <a href="{{ .Permalink }}"> {{ .Title }} </a> </h2>
+    <h6> 
+    <div>
+    Tags: 
+    {{ range $ith, $tag := .Params.tags }}
+        {{ if $ith }}, {{ end }}
+        <a href="/tags/{{$tag | urlize }}/">{{ $tag }}</a>
+    {{ end }}
+    </div>
+    </h6>
+    <p>{{ .Summary }}</p>
+    </div>
+    {{ end}}
+    <div style="text-center">
+    {{ template "_internal/pagination.html" . }}
+    </div>
+</div>
 {{ end }}

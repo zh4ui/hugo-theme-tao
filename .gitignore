@@ -1,7 +1,7 @@
 
 
 *.swp
-
+dist
 node_modules
 .sass-cache
 
